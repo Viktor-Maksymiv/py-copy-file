@@ -6,6 +6,8 @@ def copy_file(command: str) -> None:
         return
     if len(splitted_command) != 3 or splitted_command[0] != "cp":
         return
+    if splitted_command[0] == splitted_command[1]:
+        return
 
     file_input = splitted_command[1]
     file_destination = splitted_command[2]
